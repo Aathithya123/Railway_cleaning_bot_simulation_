@@ -1,18 +1,17 @@
 import time
 import os
-import requests  # Make sure to install the requests library if you haven't already
+import requests  
 
-# Define constants for ultrasonic sensor pins
+
 TRIG_LEFT = 5
 ECHO_LEFT = 6
 TRIG_RIGHT = 13
 ECHO_RIGHT = 12
 
 # Your OneSignal credentials
-ONESIGNAL_APP_ID = '036b6697-d0e0-40a9-8baf-9d97ef1894e7'
-ONESIGNAL_API_KEY = 'Mzk2ZjBhODctYjZkMC00NzhlLWI1ZmMtYWE1MDBlYWMzMjli'
+ONESIGNAL_APP_ID = '________________________________________'
+ONESIGNAL_API_KEY = '_______________________________________'
 
-# Function to send a notification
 def send_notification(message):
     url = 'https://onesignal.com/api/v1/notifications'
     headers = {
@@ -22,7 +21,7 @@ def send_notification(message):
     data = {
         'app_id': ONESIGNAL_APP_ID,
         'contents': {'en': message},
-        'included_segments': ['All']  # Send to all devices
+        'included_segments': ['All']  
     }
     response = requests.post(url, headers=headers, json=data)
     if response.status_code == 200:
@@ -56,12 +55,12 @@ class MockServo:
 
 def measure_distance(trig, echo):
     print(f"Measuring distance with TRIG {trig} and ECHO {echo}")
-    return 25  # Mock distance value for testing
+    return 25  
 
 def clean_with_servo(servo):
-    servo.set_angle(90)  # Simulate servo movement to clean
+    servo.set_angle(90)  
     time.sleep(1)
-    servo.set_angle(0)  # Return to neutral position
+    servo.set_angle(0)  
 
 def read_command():
     try:
@@ -86,7 +85,7 @@ def clean_track(duration):
         'right': MockServo(pin=16)
     }
 
-    # Start moving motors
+   
     for name, motor in motors.items():
         print(f"Motor {name} started")
         motor.forward()
@@ -98,7 +97,7 @@ def clean_track(duration):
 
     obstacle_detected = False
     obstacle_removed = False
-    notification_sent = False  # Add a flag for the notification
+    notification_sent = False  
 
     while time.time() - start_time < duration:
         distance_left = measure_distance(TRIG_LEFT, ECHO_LEFT)
@@ -112,7 +111,7 @@ def clean_track(duration):
             for motor in motors.values():
                 motor.stop()
             for motor in cleaning_motors.values():
-                motor.forward()  # Activate cleaning motors
+                motor.forward()  
             for servo in servos.values():
                 clean_with_servo(servo)
         elif command == 'obstacle removed':
@@ -124,10 +123,10 @@ def clean_track(duration):
             for motor in cleaning_motors.values():
                 motor.forward()
         elif command == 'obstacle cannot be removed':
-            if not notification_sent:  # Check if the notification was already sent
+            if not notification_sent:  
                 print("Obstacle cannot be removed, sending notification and stopping all motors...")
                 send_notification("Obstacle cannot be removed")
-                notification_sent = True  # Mark the notification as sent
+                notification_sent = True  
             for motor in motors.values():
                 motor.stop()
             for motor in cleaning_motors.values():
@@ -138,7 +137,6 @@ def clean_track(duration):
 
         time.sleep(0.1)
 
-    # Stop all motors after the track cleaning
     for name, motor in motors.items():
         print(f"Motor {name} stopped")
         motor.stop()
@@ -147,7 +145,6 @@ def clean_track(duration):
         motor.stop()
 
 try:
-    # Start the bot to clean track for 60 seconds (adjust as needed)
     clean_track(60)
 
 except KeyboardInterrupt:
@@ -155,6 +152,5 @@ except KeyboardInterrupt:
 
 finally:
     print("Cleanup done.")
-    # Handle the case where 'command.txt' may not exist
     if os.path.exists('command.txt'):
-        os.remove('command.txt')  # Clean up the command file on exit
+        os.remove('command.txt')
