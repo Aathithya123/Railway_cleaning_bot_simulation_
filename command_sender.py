@@ -7,7 +7,7 @@ def send_command():
             file.write(command)
         if command == 'exit':
             break
-        time.sleep(0.1)  # Small delay to allow the file to be properly updated
+        time.sleep(0.1)  
 
 if __name__ == "__main__":
     send_command()
